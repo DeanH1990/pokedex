@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import FetchAllPokemon from './components/FetchAllPokemon';
 import OnePokemon from './components/OnePokemon';
 import Navigation from './components/Navigation';
+import ErrorPage from './components/ErrorPage';
 
 function App() {
   
@@ -16,6 +17,7 @@ function App() {
           <Routes>
             <Route path='/' element={<FetchAllPokemon />} />
             <Route path='/pokemon/:pokemonId' element={<OnePokemon />} />
+            <Route path='*' element={<ErrorPage/>} />
           </Routes>
         </div>
       </BrowserRouter>
