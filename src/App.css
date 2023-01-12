@@ -29,7 +29,8 @@
 }
 
 .card-container {
-  width: 60%;
+  justify-content: center;
+  width: 70%;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -41,4 +42,46 @@ Button {
 
 .Card-Footer {
   font-size: small;
+}
+
+.whole-view {
+  display: flex;
+  align-items: center;
+}
+
+.individual-pokemon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 20px;
+  border: 2px solid rgb(26, 158, 202);
+  border-radius: 5px;
+}
+
+.poke-img {
+  width: 20rem;
+}
+
+.one-poke-info {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  border-top: 2px solid rgb(26, 158, 202);
+}
+
+.types-and-moves {
+  margin-right: 5rem;
+}
+
+.types p {
+  margin: 5px;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .individual-pokemon {
+    width: 75%;
+  }
 }
