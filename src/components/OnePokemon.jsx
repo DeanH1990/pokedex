@@ -53,15 +53,15 @@ const OnePokemon = () => {
 
     return isLoading ? <>Loading...</> : (
         <div className="whole-view">
-            {parseInt(pokemonId) > 1 ?
-            <Link to={`/pokemon/${parseInt(pokemonId) - 1}`}>
+            {parseInt(onePoke.id) > 1 ?
+            <Link to={`/pokemon/${parseInt(onePoke.id) - 1}`}>
                 <button onClick={back}>Back</button>
             </Link>
             : null}
             <section className="individual-pokemon">
                 <div className="one-poke-header">
                     <h3>{onePoke.name.charAt(0).toUpperCase() + onePoke.name.slice(1)}</h3>
-                    <img className="poke-img" src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemonId}.png`} alt={onePoke.name}/>
+                    <img className="poke-img" src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${onePoke.id}.png`} alt={onePoke.name}/>
                 </div>
                 <div className="one-poke-info">
                     <div className="types-and-moves">
@@ -75,8 +75,8 @@ const OnePokemon = () => {
                     </div>
                 </div>
             </section>
-            {parseInt(pokemonId) < 151 ?
-            <Link to={`/pokemon/${parseInt(pokemonId) + 1}`}>
+            {parseInt(onePoke.id) < 151 ?
+            <Link to={`/pokemon/${parseInt(onePoke.id) + 1}`}>
                 <button onClick={next}>Next</button>
             </Link>
             : null}

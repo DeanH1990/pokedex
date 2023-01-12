@@ -4,8 +4,8 @@ import { Card, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 
-const FetchAllPokemon = (props) => {
-    const { pokemon, setPokemon } = props;
+const FetchAllPokemon = () => {
+    const [pokemon, setPokemon] = useState([]);
 
     const loadPokemon = async () => {
         try {
@@ -29,8 +29,7 @@ const FetchAllPokemon = (props) => {
                     <Card.Body>
                         <Card.Title as='h3'>{name.charAt(0).toUpperCase() + name.slice(1)}</Card.Title>
                         <Card.Text>
-                        Some quick example text to build on the card title and make up the
-                        bulk of the card's content.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt laudantium nostrum commodi ullam vero.
                         </Card.Text>
                         <Card.Footer style={{fontSize: 'small'}}> Pokedex no: {index + 1}</Card.Footer>
                         <Link to={`/pokemon/${index + 1}`}>

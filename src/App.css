@@ -24,14 +24,30 @@
   color: white;
 }
 
-.App-link {
+/* .App-link {
   color: #61dafb;
+} */
+.navbar {
+  display: flex;
+  padding: 10px;
+  background-color: lightgray;
+  align-items: center;
+}
+
+.navbar-brand {
+  margin-right: 10px;
+}
+
+.nav-link {
+  margin: 5px;
+  text-decoration: none;
 }
 
 .card-container {
   justify-content: center;
   width: 70%;
   margin: 0 auto;
+  margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
 }
@@ -83,5 +99,8 @@ Button {
 @media only screen and (max-width: 600px) {
   .individual-pokemon {
     width: 75%;
+  }
+  .poke-img {
+    width: 60%;
   }
 }
