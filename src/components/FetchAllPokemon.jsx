@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react"
 import { getAllPokemon } from "../pokeApi";
 import { Card, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 
-const FetchAllPokemon = () => {
-    const [pokemon, setPokemon] = useState([]);
-
+const FetchAllPokemon = (props) => {
+    const { pokemon, setPokemon } = props;
 
     const loadPokemon = async () => {
         try {
@@ -33,11 +33,12 @@ const FetchAllPokemon = () => {
                         bulk of the card's content.
                         </Card.Text>
                         <Card.Footer style={{fontSize: 'small'}}> Pokedex no: {index + 1}</Card.Footer>
-                        <Button variant="primary">View</Button>
+                        <Link to={`/pokemon/${index + 1}`}>
+                            <Button variant="primary" >View</Button>
+                        </Link>
                     </Card.Body>
                 </Card>
             })}
-
         </section>
     )
 }
