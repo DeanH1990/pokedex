@@ -44,6 +44,11 @@ Button {
   font-size: small;
 }
 
+.whole-view {
+  display: flex;
+  align-items: center;
+}
+
 .individual-pokemon {
   display: flex;
   flex-direction: column;
