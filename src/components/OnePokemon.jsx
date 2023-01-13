@@ -5,7 +5,7 @@ import ErrorPage from "./ErrorPage";
 
 const OnePokemon = (props) => {
     const { pokeSearch } = props;
-
+    
     const {pokemonId} = useParams();
     
     const [onePoke, setOnePoke] = useState([]);
@@ -43,7 +43,6 @@ const OnePokemon = (props) => {
         try {
             setIsLoading(true);
             const justOne = await getPokemonById(pokemonId || pokeSearch);
-            console.log(pokemonId, pokeSearch)
             setOnePoke(justOne);
             setIsLoading(false);
         } catch (error) {
@@ -55,9 +54,10 @@ const OnePokemon = (props) => {
 
     useEffect(() => {
         loadOne();
-    }, [pokemonId])
+    }, [pokemonId, pokeSearch])
 
-    return isLoading ? <>Loading...</> : (
+    return isLoading ? <>Loading...</> :
+            error ? <h3><ErrorPage message={error.response} /></h3>  : (
         <div className="whole-view">
             {parseInt(onePoke.id) > 1 ?
             <Link to={`/pokemon/${parseInt(onePoke.id) - 1}`}>

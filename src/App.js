@@ -11,7 +11,7 @@ function App() {
 
   const [pokeSearch, setPokeSearch] = useState('');
   const [inputValue, setInputValue] = useState('');
-  
+  console.log(pokeSearch, 'in app')
 
   return (
     <ThemeProvider breakpoints={['xxxl', 'xxl', 'xl', 'lg', 'md', 'sm', 'xs', 'xxs']}>

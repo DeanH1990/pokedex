@@ -30,6 +30,7 @@
   background-color: lightgray;
   align-items: center;
 }
+
 .navbar-collapse {
   display: flex;
 }
@@ -44,7 +45,6 @@
 }
 
 .form-label {
-  
   margin: 5px;
 }
 
@@ -107,5 +107,11 @@ Button {
   }
   .poke-img {
     width: 60%;
+  }
+  .form-control {
+    width: 100px;
+  }
+  .navbar-collapse {
+    align-items: center;
   }
 }
