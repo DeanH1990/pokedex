@@ -31,6 +31,10 @@
   align-items: center;
 }
 
+.navbar-collapse {
+  display: flex;
+}
+
 .navbar-brand {
   margin-right: 10px;
 }
@@ -38,6 +42,10 @@
 .nav-link {
   margin: 5px;
   text-decoration: none;
+}
+
+.form-label {
+  margin: 5px;
 }
 
 .card-container {
@@ -99,5 +107,11 @@ Button {
   }
   .poke-img {
     width: 60%;
+  }
+  .form-control {
+    width: 100px;
+  }
+  .navbar-collapse {
+    align-items: center;
   }
 }

@@ -1,12 +1,16 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { getPokemonById } from "../pokeApi";
+import ErrorPage from "./ErrorPage";
 
-const OnePokemon = () => {
+const OnePokemon = (props) => {
+    const { pokeSearch } = props;
+    
     const {pokemonId} = useParams();
     
     const [onePoke, setOnePoke] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
+    const [error, setError] = useState(null);
 
     const next = async () => {
         try {
@@ -31,27 +35,29 @@ const OnePokemon = () => {
         } catch (error) {
             console.log(error);
             setIsLoading(false);
+            
         }
     }
 
     const loadOne = async () => {
         try {
             setIsLoading(true);
-            const justOne = await getPokemonById(pokemonId);
-            
+            const justOne = await getPokemonById(pokemonId || pokeSearch);
             setOnePoke(justOne);
             setIsLoading(false);
         } catch (error) {
             console.log(error)
             setIsLoading(false)
+            setError(error);
         }
     }
 
     useEffect(() => {
         loadOne();
-    }, [pokemonId])
+    }, [pokemonId, pokeSearch])
 
-    return isLoading ? <>Loading...</> : (
+    return isLoading ? <>Loading...</> :
+            error ? <h3><ErrorPage message={error.response} /></h3>  : (
         <div className="whole-view">
             {parseInt(onePoke.id) > 1 ?
             <Link to={`/pokemon/${parseInt(onePoke.id) - 1}`}>
@@ -62,6 +68,7 @@ const OnePokemon = () => {
                 <div className="one-poke-header">
                     <h3>{onePoke.name.charAt(0).toUpperCase() + onePoke.name.slice(1)}</h3>
                     <img className="poke-img" src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${onePoke.id}.png`} alt={onePoke.name}/>
+                    <p>Pokedex no. {onePoke.id}</p>
                 </div>
                 <div className="one-poke-info">
                     <div className="types-and-moves">
