@@ -30,6 +30,9 @@
   background-color: lightgray;
   align-items: center;
 }
+.navbar-collapse {
+  display: flex;
+}
 
 .navbar-brand {
   margin-right: 10px;
@@ -38,6 +41,11 @@
 .nav-link {
   margin: 5px;
   text-decoration: none;
+}
+
+.form-label {
+  
+  margin: 5px;
 }
 
 .card-container {
