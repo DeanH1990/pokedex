@@ -1,70 +1,60 @@
-# Getting Started with Create React App
+# Pokedex project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## The pokedex website
 
-## Available Scripts
+The pokedex utilises the pokeapi.co resource and displays all of the 151 base pokemon from the first instalments of the franchise.
 
-In the project directory, you can run:
+The pokemon can be viewed as a big list and individually where you can go one by one. Alternatively if you have a pokemon in mind that you wish to view you can search for it using the search bar.
 
-### `npm start`
+## Navigating the website
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The website is responsive depending on your screen size, so you can view your favourite pokemon even on the go!
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The homepage will display a list of all pokemon.
 
-### `npm test`
+You can select an indivdual pokemon from here which will go to that individual pokemon page and display their stats. This is displayed in a similar layout to a pokemon card.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Clicking the 'Individuals' nav link will load a random pokemon for you!
 
-### `npm run build`
+Or you can search for a specific pokemon if you have one in mind.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+While viewing an individual pokemon you can go back and forth in the pokedex one by one.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## How to use this repo
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Clone the repo
 
-### `npm run eject`
+In order to clone the repo you will need to fork it to your github. You can then clone the forked repo using the following command:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+    git clone <forked repo url link>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Make sure to change into this directory with:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+    cd pokedex
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+2. Install the required dependencies
 
-## Learn More
+This project makes use of the following packages/ dependancies:
+- axios
+- bootstrap
+- react-bootstrap
+- react-dom
+- react-router-dom
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Install the required dependecies using the following command:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+    npm install
 
-### Code Splitting
+3. Run the project locally using this command:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+    npm start
 
-### Analyzing the Bundle Size
+## Requirements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+You will need the following minimum versions to run the project:
 
-### Making a Progressive Web App
+- Node v18.4.0
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Acknowledgements
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Thanks to pokeapi.co for an amazing and comprehensive open source resource.
